@@ -7,13 +7,9 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-
-        ConsoleWriter writer = new ConsoleWriter();
         QuizBuilder builder;
 
-        System.out.println("Choose a quiz type:");
-        System.out.println("1. Soccer Quiz");
-        System.out.println("2. Music Quiz");
+        System.out.println("Choose a quiz type: \n 1. Soccer Quiz \n 2. Music Quiz");
 
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
@@ -27,8 +23,6 @@ public class Main {
         }
 
         QuizDirector director = new QuizDirector(builder);
-        String quiz = director.makeQuizQuestions();
-
-        writer.writeLine(quiz);
+        director.makeQuizQuestions();
     }
 }

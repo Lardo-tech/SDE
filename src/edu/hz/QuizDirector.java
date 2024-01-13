@@ -1,5 +1,7 @@
 package edu.hz;
 
+//Builder Pattern
+
 public class QuizDirector {
     private QuizBuilder _builder;
 
@@ -7,21 +9,10 @@ public class QuizDirector {
         _builder = builder;
     }
 
-    public void ChangeBuilder(QuizBuilder builder) {
-        _builder = builder;
-    }
 
-    public String makeQuizQuestions() {
-        _builder.reset();
-        _builder.QuestionOne();
-        _builder.AnswerOne();
-        _builder.QuestionTwo();
-        _builder.AnswerTwo();
-        _builder.QuestionThree();
-        _builder.AnswerThree();
-        _builder.QuestionFour();
-        _builder.AnswerFour();
+    public void makeQuizQuestions() {
+    QuizTemplate quiz = _builder.buildQuiz();
 
-        return _builder.getQuestions();
+    quiz.generateQuiz();
     }
 }
