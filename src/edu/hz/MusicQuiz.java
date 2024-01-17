@@ -6,6 +6,10 @@ import java.util.Scanner;
 public class MusicQuiz extends QuizTemplate {
     private final Scanner scanner = new Scanner(System.in);
 
+    public MusicQuiz(ScoreTracker scoreTracker) {
+        super(scoreTracker);
+    }
+
     @Override
     protected void generateQuestionOne() {
         System.out.println("Who is known as the 'King of Pop'?");
@@ -27,6 +31,7 @@ public class MusicQuiz extends QuizTemplate {
 
         if ("a".equalsIgnoreCase(userAnswer)) {
             System.out.println("Correct! Michael Jackson is known as the 'King of Pop.' \n");
+            updateScore(1);
         } else {
             System.out.println("Incorrect. The correct answer is a) Michael Jackson. \n");
         }
@@ -43,6 +48,7 @@ public class MusicQuiz extends QuizTemplate {
 
         if ("c".equalsIgnoreCase(userAnswer)) {
             System.out.println("Correct! 'The Dark Side of the Moon' was released by Pink Floyd. \n");
+            updateScore(1);
         } else {
             System.out.println("Incorrect. The correct answer is c) Pink Floyd. \n");
         }

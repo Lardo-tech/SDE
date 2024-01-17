@@ -16,6 +16,7 @@ Creational:
 
 Behavioral: 
 - Template Method: Voor het kopje behavioral hebben we gekozen om de Template Method te gebruiken, deze maakt namelijk een voorbeeld van hoe de quizvragen er uit moeten komen te zien en daar moeten de MusicBuilder en de SoccerBuilder zich dan aan houden. Het voordeel is dat je op deze mannier twee dezelfde quizzen krijgt maar dan elk met eigen inhoud, hierdoor heb je tegelijkertijd ook minder last van code duplicatie. 
+- Observer: Voor het kopje behavioral hebben we er ook voor gekozen om een Observer te gebruiken, deze zorgt er voor dat er een score wordt bijgehouden als de gebruiker het juiste antwoord invult bij een vraag. Vervolgens wordt aan het einde de totale socre getoond.
 
 Structural:
 - Facade: Voor het kopje structural hebben we gekozen om de Facade te gebruiken, deze zorgt er namelijk voor dat de gebruiker maar een paar methodes hoeft aan te roepen om de quiz te kunnen spelen. De gebruiker hoeft alleen de methodes QuizOption en conductQuiz aan te roepen en de rest wordt dan voor hem gedaan. De facade zorgt er voor dat de juiste builder wordt aangeroepen en dat de juiste vragen worden opgehaald uit de database.

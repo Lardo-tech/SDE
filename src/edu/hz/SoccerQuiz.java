@@ -7,6 +7,9 @@ import java.util.Scanner;
 public class SoccerQuiz extends QuizTemplate {
     private final Scanner scanner = new Scanner(System.in);
 
+    public SoccerQuiz(ScoreTracker scoreTracker) {
+        super(scoreTracker);
+    }
     @Override
     protected void generateQuestionOne() {
         System.out.println("Who won the FIFA World Cup in 2018?");
@@ -28,6 +31,7 @@ public class SoccerQuiz extends QuizTemplate {
 
         if ("a".equalsIgnoreCase(userAnswer)) {
             System.out.println("Correct! France won the FIFA World Cup in 2018. \n");
+            updateScore(1);
         } else {
             System.out.println("Incorrect. The correct answer is a France. \n");
         }
@@ -45,6 +49,7 @@ public class SoccerQuiz extends QuizTemplate {
 
         if ("a".equalsIgnoreCase(userAnswer)) {
             System.out.println("Correct! Miroslav Klose is the all-time leading goal scorer in FIFA World Cup history.\n");
+            updateScore(1);
         } else {
             System.out.println("Incorrect. The correct answer is a Miroslav Klose.\n");
         }
