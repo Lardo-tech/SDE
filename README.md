@@ -6,10 +6,10 @@ De gebruiker kan dan de vragen beantwoorden en krijgt dan direct te zien of het 
 maken van de quiz hebben we gebruik gemaakt van de Builder Pattern, de Template Method en een facade.
 
 Creational: 
-- Builder Pattern: Voor het Kopje creational hebben we gekozen om een builder te gebruiken. De builder zorgt er voor dat er twee verschillende quiz types gemaakt kunnen worden namelijk de SoccerQuiz en de MusicQuiz. De gebruiker kiest welke hij wilt spelen en de QuizDirector stuurt de juiste Builder aan om zijn quiz te maken. Als de gebruiker kiest voor de SoccerQuiz wordt de SoccerBuilder aangeroepen en andersom. 
+- Builder Pattern: Voor het Kopje creational hebben we gekozen om een builder te gebruiken. De builder zorgt er voor dat er twee verschillende quiz types gemaakt kunnen worden namelijk de SoccerQuiz en de MusicQuiz. De gebruiker kiest welke hij wilt spelen en de QuizDirector stuurt de juiste Builder aan om zijn quiz te maken. Als de gebruiker kiest voor de SoccerQuiz wordt de SoccerBuilder aangeroepen en andersom. De soccerBuilder roept dan vervolgens weer de template method aan. 
 
 Behavioral: 
-- Template Method: Voor het kopje behavioral hebben we gekozen om de Template Method te gebruiken, deze maakt namelijk een voorbeeld van hoe de quizvragen er uit moeten komen te zien en daar moeten de MusicBuilder en de SoccerBuilder zich dan aan houden. Het voordeel is dat je op deze mannier twee dezelfde quizzen krijgt maar dan elk met eigen inhoud, hierdoor heb je tegelijkertijd ook minder last van code duplicatie. 
+- Template Method: Voor het kopje behavioral hebben we gekozen om de Template Method te gebruiken, deze maakt namelijk een voorbeeld van hoe de quizvragen er uit moeten komen te zien en daar moeten de MusicBuilder en de SoccerBuilder zich dan aan houden. Het voordeel is dat je op deze mannier twee dezelfde quizzen krijgt maar dan elk met eigen inhoud, hierdoor heb je tegelijkertijd ook minder last van code duplicatie. De Template method is terug te vinden in QuizTeamplate waar angegeven wordt dat er twee vragen en twee antoorden gemaakt moeten worden. In SoccerQuiz en in Music Quiz worden deze template methods als het ware ingevuld, zodat er vragen en antwoorden verschijnen op het scherm. 
 - Observer: Voor het kopje behavioral hebben we er ook voor gekozen om een Observer te gebruiken, deze zorgt er voor dat er een score wordt bijgehouden als de gebruiker het juiste antwoord invult bij een vraag. Vervolgens wordt aan het einde de totale socre getoond.
 
 Structural:
@@ -19,4 +19,6 @@ Onze samenwerking:
 
 De samenwerking is soepel verlopen. Vanaf het begin was duidelijk wat voor soort programma we wilden gaan maken. Daarna
 Hebben we uitgezocht wat voor design paterns hier bij zouden passen. Vervolgens hebben we deze verdeeld en beide twee 
-design patterns geimplementeerd. 
+design patterns geimplementeerd. Gijs heeft de Template Method en de Observer gemaakt en Lars heeft de Builder en de facade gemaakt. 
+
+Gemaakt door: Gijs van de Meule & Lars de Hond
