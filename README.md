@@ -22,3 +22,4 @@ Hebben we uitgezocht wat voor design paterns hier bij zouden passen. Vervolgens 
 design patterns geimplementeerd. Gijs heeft de Template Method en de Observer gemaakt en Lars heeft de Builder en de facade gemaakt. 
 
 Gemaakt door: Gijs van de Meule & Lars de Hond
+Github: https://github.com/Lardo-tech/SDE
